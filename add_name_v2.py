@@ -26,16 +26,11 @@ def add_china_name(result):
     name1 = result[cell_11]
     name2 = result[cell_12]
 
-
-
     wbk.get_sheet(0).write(1, 1, cell_11 + '('+name1 + ')')
     wbk.get_sheet(0).write(1, 2, cell_12 + '('+name2 + ')')
     wbk.save('pearn_crr_data1.xlsx')
 
-
     print cell_11, cell_12, name1.encode('utf-8'), name2.encode('utf-8')
-
-
 
 
 def add_china_name1(result):
@@ -188,6 +183,7 @@ def csv2excel():
     df['name_point2'] = name_point2_list
 
     df.to_excel('kk.xlsx', u'皮尔逊相关系数(5min10min)')
+
 
 if __name__ == "__main__":
 
